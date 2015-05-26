@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		{% block title%} My template {% endblock %}
+	</title>
+		<style type="text/css">
+body{
+	text-align: center;
+}
+#content{
+	box-shadow: 3px;
+	float: left;
+	width: 960px;
+}
+#sidebar{
+	float: left;
+	width: 200px;
+	border: 1px solid black;
+}
+		</style>
+
+</head>
+<body>
+<div id="sidebar">
+	{% block sidebar%}
+	<ul>
+		<li>
+			<a href="/articles/all">all</a>
+			<a href="/admin">admin</a>
+		</li>
+	</ul>
+	{% endblock %}
+</div>
+<div id="content">
+	{% block content %}
+	this is a content
+	{% endblock %}
+</div>
+
+</body>
+</html>
