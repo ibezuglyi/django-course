@@ -1,0 +1,11 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.template.loader import get_template
+from django.template  import Context
+
+
+def hello(request):
+    name = "Mika"
+    html = "<html><body><h1>looks ok %s</h1></body></html>" % name
+    return HttpResponse(html)
+
